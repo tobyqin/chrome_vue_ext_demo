@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "GitHub Info",
+    "version": "1.0.0",
+    "description": "Demo to use Vue in Chrome extension.",
+    "icons":
+    {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    "browser_action": 
+    {
+        "default_icon": "img/icon.png",
+        "default_title": "Github Info",
+        "default_popup": "popup.html"
+    },
+    "permissions":
+    [
+        "contextMenus", 
+        "tabs",
+        "notifications", 
+        "webRequest",
+        "webRequestBlocking",
+        "storage", 
+        "cookies",
+        "activeTab",
+        "<all_urls>"
+    ],
+    "homepage_url": "https://github.com/tobyqin/chrome_vue_ext_demo",
+    "options_ui":
+    {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "content_security_policy": "style-src 'self' 'unsafe-inline';script-src 'self' 'unsafe-eval' https://cdn.bootcss.com; object-src 'self' ;"
+}
