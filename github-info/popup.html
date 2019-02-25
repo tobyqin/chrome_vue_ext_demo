@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Popup</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="style.css" rel="stylesheet">
+</head>
 <body>
 <div id="app">
-    {{ message }}
+    <h2>{{message}}</h2>
+    <div v-if="userInfo">
+        <span>Login: {{userInfo.login}}</span><br>
+        <span>Repos: {{userInfo.public_repos}}</span><br>
+        <span>Gists: {{userInfo.public_gists}}</span><br>
+        <span>Followers: {{userInfo.followers}}</span><br>
+    </div>
+    <p v-if="!userInfo">Go to any github repo page, this plugin will tell you something.</p>
 </div>
 
 <script src="https://cdn.bootcss.com/vue/2.6.6/vue.js"></script>
-<script src="app.js"></script>
+<script src="popup.js"></script>
 
 </body>
 </html>

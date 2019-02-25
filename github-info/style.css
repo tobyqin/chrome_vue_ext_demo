@@ -1,0 +1,7 @@
+body {
+    font-family: 'Microsoft Yahei', Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    width: 200px;
+    min-height: 100px;
+    padding: 0 10px;
+    background-image: url('img/bg.png')
+}
