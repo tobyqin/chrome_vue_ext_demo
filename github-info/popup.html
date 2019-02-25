@@ -10,10 +10,10 @@
 <div id="app">
     <h2>{{message}}</h2>
     <div v-if="userInfo">
-        <span>Login: {{userInfo.login}}</span><br>
-        <span>Repos: {{userInfo.public_repos}}</span><br>
-        <span>Gists: {{userInfo.public_gists}}</span><br>
-        <span>Followers: {{userInfo.followers}}</span><br>
+        <span v-if="showLogin">Login: {{userInfo.login}}<br></span>
+        <span>Repos: {{userInfo.public_repos}}<br></span>
+        <span>Gists: {{userInfo.public_gists}}<br></span>
+        <span>Followers: {{userInfo.followers}}<br></span>
     </div>
     <p v-if="!userInfo">Go to any github repo page, this plugin will tell you something.</p>
 </div>

@@ -1,8 +1,9 @@
-var popup = new Vue({
+new Vue({
     el: '#app',
     data: {
         message: 'Not on github now.',
-        userInfo: null
+        userInfo: null,
+        showLogin: true
     },
     methods: {
         getUserId(url) {
@@ -22,11 +23,16 @@ var popup = new Vue({
                     this.message = this.userInfo.name;
                 }
             );
+        },
+        loadOptions() {
+            let v = localStorage.getItem('showLogin');
+            if (v === 'false') this.showLogin = false;
         }
     },
     created: function () {
         chrome.tabs.getSelected(null, tab => {
             this.getUserId(tab.url);
+            this.loadOptions();
         });
     }
 });

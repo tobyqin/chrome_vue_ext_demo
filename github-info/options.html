@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <input type="checkbox" name="f-login" v-model="showLogin">
+    <label for="f-login">Show Login </label>
+    <br>
+    <br><br>
+    <button @click="saveOptions()">OK</button>
+</div>
+
+<script src="https://cdn.bootcss.com/vue/2.6.6/vue.js"></script>
+<script src="options.js"></script>
+
+</body>
+</html>
